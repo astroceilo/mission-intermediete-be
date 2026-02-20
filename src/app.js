@@ -1,4 +1,4 @@
-import connection from './db/connection.js';
+import connection from './database/connection.js';
 
 const testConnection = async () => {
   try {

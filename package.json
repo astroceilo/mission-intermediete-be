@@ -2,9 +2,11 @@
   "name": "intermediete-be-2a",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "dev": "nodemon src/index.js  --watch src/ --watch package.json --watch .env",
+    "seed:users": "node src/database/seeders/users.seeder.js",
+    "reset:users": "node src/seeders/reset-users.js",
+    "dev": "nodemon src/app.js  --watch src/ --watch package.json --watch .env",
     "start": "node src/app.js"
   },
   "repository": {
@@ -23,5 +25,8 @@
     "dotenv": "^17.3.1",
     "mysql2": "^3.17.3",
     "nodemon": "^3.1.13"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.3.0"
   }
 }
